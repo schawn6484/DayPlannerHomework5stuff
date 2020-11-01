@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-    $("#currentDay").text(moment().format("dddd, MMMM Do"));
+    $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
     var currentHour = moment().hour();
 
-    $('time-block').each(function(){
+    $('.time-block').each(function(){
     var id = parseInt($(this).attr('id'));
     if(id < currentHour){
         $(this).addClass('past');
@@ -18,8 +18,18 @@ $(document).ready(function(){
     }
     
     )
-   localStorage.setItem(" " ,  JSON.stringify());
 
+    $('#saveBtn').click(function(){
+
+        
+    }
+    
+    
+    
+    
+    )
+    
+    localStorage.setItem(" " ,  JSON.stringify()); 
 
 
 
