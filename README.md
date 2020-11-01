@@ -4,3 +4,5 @@ Initial style.css
 
 ![](images/Screen%20Shot%202020-10-28%20at%208.10.11%20PM.png)
 ![](images/Screen%20Shot%202020-10-28%20at%208.10.16%20PM.png)
+![](images/Screen%20Shot%202020-10-31%20at%2011.32.30%20PM.png)
+![](images/Screen%20Shot%202020-10-31%20at%2011.16.07%20PM.png)
