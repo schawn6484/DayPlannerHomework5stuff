@@ -2,11 +2,14 @@ $(document).ready(function(){
 
     $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
     var currentHour = moment().hour();
+    
 
     var savedPlan = JSON.parse(localStorage.getItem("savedPlan"));
 
     if(savedPlan !== null){
         planTextArray =savedPlan
+    } else {
+        planTextArray = new Array(9);
     }
 
     for( var hour = 9; hour <= 17; hour++)
@@ -30,5 +33,6 @@ $(document).ready(function(){
 
 
 localStorage.setItem("savedPlan", JSON.stringify(planTextArray)); 
+console.log(localStorage);
 
 });
