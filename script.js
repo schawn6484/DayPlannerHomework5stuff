@@ -1,20 +1,27 @@
 $(document).ready(function(){
-
+//Current Time and Date
     $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
     var currentHour = moment().hour();
-    
-
-    var savedPlan = JSON.parse(localStorage.getItem("savedPlan"));
-
-    if(savedPlan !== null){
-        planTextArray =savedPlan
-    } else {
-        planTextArray = new Array(9);
-    }
-
-    for( var hour = 9; hour <= 17; hour++)
 
 
+//Save Button with local storage    
+    $('.saveBtn').click(function(){
+        console.log('button clicked')
+        var value = $(this).siblings('.description').val();
+        var time = $(this).parent().attr('id');
+
+        localStorage.setItem(time, value);
+    });
+
+//Text area, Description with local storage  
+    $('textarea').each(function(){
+        var time = $(this).parent().attr('id');
+        var scheduleTime =  localStorage.getItem(time);
+        $(this).val(scheduleTime);
+
+    });
+
+//Color change    
     $('.time-block').each(function(){
     var id = parseInt($(this).attr('id'));
     if(id < currentHour){
@@ -31,8 +38,5 @@ $(document).ready(function(){
     
     )
 
-
-localStorage.setItem("savedPlan", JSON.stringify(planTextArray)); 
-console.log(localStorage);
 
 });
