@@ -2,6 +2,12 @@
 Initial index.html
 Initial style.css
 
+Index.html: Added timeblocks
+Script.js: Added current date, color change, local storage
+
+Index.html: Added responsive 
+Script.js: Added save button, text area 
+           Modified local storage with save button and text area
 
 ![](images/Screen%20Shot%202020-10-28%20at%208.10.11%20PM.png)
 ![](images/Screen%20Shot%202020-10-28%20at%208.10.16%20PM.png)
